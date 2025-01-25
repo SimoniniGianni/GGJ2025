@@ -34,3 +34,7 @@ func _integrate_forces(state):
 	rotation_degrees = 0;
 	state.linear_velocity.x = movx;
 	pass
+
+
+func _on_Area2D_body_entered(body):
+	print("ENEMIGO ACTIVADO")
