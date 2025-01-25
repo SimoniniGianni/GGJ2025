@@ -1,5 +1,6 @@
 extends Node
 
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,16 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Enemigo_body_entered(body:Node):
-	if body.name == "player":
-		$animaciones.animation = "activo";
-		$activador.hide();
-		$hitbox.show();
-	pass # Replace with function body.
-
-
-func _on_hitbox_body_entered(body:Node):
-	if body.name == "player":
-		body.restarVida();
-	pass # Replace with function body.
+func accion():
+	get_tree().quit();
+	pass
