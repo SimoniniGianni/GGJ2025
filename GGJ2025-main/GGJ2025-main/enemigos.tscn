@@ -103,11 +103,11 @@ extents = Vector2( 79.625, 24 )
 [sub_resource type="RectangleShape2D" id=102]
 extents = Vector2( 56, 68.5 )
 
-[sub_resource type="Gradient" id=164]
+[sub_resource type="Gradient" id=172]
 colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=138]
-gradient = SubResource( 164 )
+gradient = SubResource( 172 )
 fill = 1
 fill_from = Vector2( 0.508333, 0.466667 )
 fill_to = Vector2( 0.541667, 0.075 )
@@ -126,12 +126,12 @@ extents = Vector2( 20, 22.5 )
 [sub_resource type="RectangleShape2D" id=55]
 extents = Vector2( 20, 3 )
 
-[sub_resource type="Gradient" id=42]
+[sub_resource type="Gradient" id=173]
 offsets = PoolRealArray( 0, 0.893855, 1 )
 colors = PoolColorArray( 0.975891, 0.691406, 1, 1, 0.0443436, 0.0443436, 0.0443436, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=56]
-gradient = SubResource( 42 )
+gradient = SubResource( 173 )
 fill = 1
 fill_from = Vector2( 0.516667, 0.479167 )
 fill_to = Vector2( 0.05, 0.2375 )
@@ -247,11 +247,11 @@ tracks/0/keys = {
 "values": [ 0.0, 1621.98 ]
 }
 
-[sub_resource type="Gradient" id=136]
+[sub_resource type="Gradient" id=174]
 colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=72]
-gradient = SubResource( 136 )
+gradient = SubResource( 174 )
 fill = 1
 fill_from = Vector2( 0.520833, 0.470833 )
 fill_to = Vector2( 0.5125, 0.0416667 )
@@ -466,11 +466,11 @@ extents = Vector2( 26.5, 151.5 )
 [sub_resource type="RectangleShape2D" id=110]
 extents = Vector2( 29, 223.5 )
 
-[sub_resource type="Gradient" id=63]
+[sub_resource type="Gradient" id=175]
 colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=111]
-gradient = SubResource( 63 )
+gradient = SubResource( 175 )
 fill = 1
 fill_from = Vector2( 0.5, 0.4875 )
 fill_to = Vector2( 0.620833, 0.0625 )

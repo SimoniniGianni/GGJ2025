@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=2]
+[gd_scene load_steps=128 format=2]
 
 [ext_resource path="res://scripts/pj/pj_general.gd" type="Script" id=1]
 [ext_resource path="res://scripts/pj/animaciones.gd" type="Script" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://imgs/enemigos/blep/blep.png" type="Texture" id=21]
 [ext_resource path="res://imgs/enemigos/blep/blep_death.png" type="Texture" id=22]
 [ext_resource path="res://imgs/burbuja/Group 2.png" type="Texture" id=23]
+[ext_resource path="res://imgs/parallax/GRASS AND CLUTTER BG 2.png" type="Texture" id=24]
 
 [sub_resource type="AtlasTexture" id=120]
 atlas = ExtResource( 18 )
@@ -107,12 +108,12 @@ extents = Vector2( 79.625, 24 )
 [sub_resource type="RectangleShape2D" id=145]
 extents = Vector2( 56, 68.5 )
 
-[sub_resource type="Gradient" id=146]
+[sub_resource type="Gradient" id=178]
 offsets = PoolRealArray( 0.027933, 1 )
 colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=147]
-gradient = SubResource( 146 )
+gradient = SubResource( 178 )
 fill = 1
 fill_from = Vector2( 0.508333, 0.466667 )
 fill_to = Vector2( 0.541667, 0.075 )
@@ -131,12 +132,12 @@ extents = Vector2( 20, 22.5 )
 [sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 20, 3 )
 
-[sub_resource type="Gradient" id=42]
+[sub_resource type="Gradient" id=179]
 offsets = PoolRealArray( 0, 0.893855, 1 )
 colors = PoolColorArray( 0.975891, 0.691406, 1, 1, 0.0443436, 0.0443436, 0.0443436, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=49]
-gradient = SubResource( 42 )
+gradient = SubResource( 179 )
 fill = 1
 fill_from = Vector2( 0.516667, 0.479167 )
 fill_to = Vector2( 0.05, 0.2375 )
@@ -204,11 +205,11 @@ extents = Vector2( 26.5, 151.5 )
 [sub_resource type="RectangleShape2D" id=56]
 extents = Vector2( 29, 223.5 )
 
-[sub_resource type="Gradient" id=178]
+[sub_resource type="Gradient" id=180]
 colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=57]
-gradient = SubResource( 178 )
+gradient = SubResource( 180 )
 fill = 1
 fill_from = Vector2( 0.5, 0.4875 )
 fill_to = Vector2( 0.620833, 0.0625 )
@@ -270,12 +271,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Gradient" id=64]
+[sub_resource type="Gradient" id=181]
 offsets = PoolRealArray( 0, 0.0391061, 1 )
 colors = PoolColorArray( 0.790222, 0.799915, 0.945313, 1, 0.965541, 0.764374, 0.988281, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=60]
-gradient = SubResource( 64 )
+gradient = SubResource( 181 )
 fill = 1
 fill_from = Vector2( 0.508333, 0.479167 )
 fill_to = Vector2( 0.2375, 0.0791667 )
@@ -422,11 +423,11 @@ tracks/0/keys = {
 "values": [ 0.0, 1621.98 ]
 }
 
-[sub_resource type="Gradient" id=141]
+[sub_resource type="Gradient" id=182]
 colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=142]
-gradient = SubResource( 141 )
+gradient = SubResource( 182 )
 fill = 1
 fill_from = Vector2( 0.520833, 0.470833 )
 fill_to = Vector2( 0.5125, 0.0416667 )
@@ -510,11 +511,11 @@ extents = Vector2( 79.625, 24 )
 [sub_resource type="RectangleShape2D" id=166]
 extents = Vector2( 56, 68.5 )
 
-[sub_resource type="Gradient" id=155]
+[sub_resource type="Gradient" id=183]
 colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=167]
-gradient = SubResource( 155 )
+gradient = SubResource( 183 )
 fill = 1
 fill_from = Vector2( 0.508333, 0.466667 )
 fill_to = Vector2( 0.541667, 0.075 )
@@ -531,6 +532,15 @@ motion_mirroring = Vector2( 1280, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 7 )
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+scale = Vector2( 2.14047, 1.94524 )
+texture = ExtResource( 24 )
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -563,6 +573,14 @@ cell_quadrant_size = 32
 show_collision = true
 format = 1
 tile_data = PoolIntArray( 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 1, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 262176, 1, 0, 262177, 1, 0, 262178, 1, 0, 262179, 1, 0, 262180, 1, 0, 262181, 1, 0, 262182, 1, 0, 262183, 1, 0, 262184, 1, 0, 262185, 1, 0, 262186, 1, 0, 262187, 1, 0, 262188, 1, 0, 262189, 1, 0, 262190, 1, 0, 2621445, 10, 0, 2621447, 10, 0, 2621449, 10, 0, 2621451, 10, 0, 2621453, 10, 0 )
+
+[node name="arboles" type="TileMap" parent="."]
+scale = Vector2( 4, 4 )
+tile_set = ExtResource( 14 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 32
+format = 1
+tile_data = PoolIntArray( -65538, 10, 0, -131055, 10, 0, -131038, 10, 0, -131018, 10, 0, -10, 9, 0, -65489, 8, 0, -65469, 9, 0, 131082, 0, 0, 589829, 4, 0, 589841, 3, 0, 2621445, 10, 0, 2621447, 10, 0, 2621449, 10, 0, 2621451, 10, 0, 2621453, 10, 0 )
 
 [node name="DETALLES" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
@@ -704,7 +722,7 @@ tile_set = ExtResource( 14 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 32
 format = 1
-tile_data = PoolIntArray( 131082, 0, 0, 589826, 9, 0, 589829, 4, 0, 589834, 9, 0, 589841, 3, 0, 589849, 9, 0, 2621445, 10, 0, 2621447, 10, 0, 2621449, 10, 0, 2621451, 10, 0, 2621453, 10, 0 )
+tile_data = PoolIntArray( 131082, 0, 0, 589829, 4, 0, 589841, 3, 0, 2621445, 10, 0, 2621447, 10, 0, 2621449, 10, 0, 2621451, 10, 0, 2621453, 10, 0 )
 
 [node name="Corazon" type="Path2D" parent="."]
 position = Vector2( 1.92785, 0 )
@@ -831,5 +849,6 @@ initial_velocity = 45.0
 [connection signal="body_exited" from="player/checkeaPiso" to="player/hitbox" method="_on_checkeaPiso_body_exited"]
 [connection signal="body_entered" from="Poppy_ene" to="Poppy_ene" method="_on_Enemigo_body_entered"]
 [connection signal="area_entered" from="Poppy_ene/hitbox" to="Corazon" method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="Poppy_ene/hitbox" to="Corazon/PathFollow2D/burbuja" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Murcielago/PathFollow2D/murcielago2" to="Murcielago/PathFollow2D/murcielago2" method="_on_Enemigo_body_entered"]
 [connection signal="body_entered" from="Blep" to="Blep" method="_on_Enemigo_body_entered"]

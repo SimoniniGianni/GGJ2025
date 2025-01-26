@@ -38,3 +38,34 @@ func cambiarEstado(e):
 func restarVida():
 	pass
 
+
+#LADI DIMITRESCU
+
+func _on_Area2D_area_entered(area):
+	print("Entro")
+	_muerte(false)
+
+
+func _on_Area2D_area_exited(area):
+	print("Salio")
+	_muerte(true)
+
+func _muerte(estado: bool):
+	if estado:
+		print("Muerte activada")
+		$dimitrescu.show()
+		$dimitrescu/AnimatedSprite.play("atacando")
+		_iniciar_timer(9.0)
+	else:
+		print("Muerte desactivada")
+		$dimitrescu.hide()
+		$Timer.stop()
+		$dimitrescu/AnimatedSprite.play("idle")
+		
+func _iniciar_timer(segundos: float):
+	$Timer.wait_time = segundos
+	$Timer.start()
+
+func _on_Timer_timeout():
+	print("9 segundos")
+	$dimitrescu.hide() 
