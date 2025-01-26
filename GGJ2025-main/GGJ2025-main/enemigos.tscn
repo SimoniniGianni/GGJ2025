@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://imgs/enemigos/murcielago/Peepers.png" type="Texture" id=1]
 [ext_resource path="res://scripts/enemigos/murcielago.gd" type="Script" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://imgs/enemigos/Poppy/Poppy.png" type="Texture" id=15]
 [ext_resource path="res://imgs/enemigos/cama/undabed.png" type="Texture" id=16]
 [ext_resource path="res://scripts/enemigos/cama.gd" type="Script" id=17]
+[ext_resource path="res://imgs/enemigos/chuckles/Chuckles.png" type="Texture" id=18]
+[ext_resource path="res://scripts/enemigos/chuckles.gd" type="Script" id=19]
 
 [sub_resource type="AtlasTexture" id=120]
 atlas = ExtResource( 16 )
@@ -327,6 +329,43 @@ animations = [ {
 "speed": 7.0
 } ]
 
+[sub_resource type="AtlasTexture" id=165]
+atlas = ExtResource( 18 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=166]
+atlas = ExtResource( 18 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=167]
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=168]
+atlas = ExtResource( 18 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=169]
+atlas = ExtResource( 18 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=170]
+atlas = ExtResource( 18 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=171]
+animations = [ {
+"frames": [ SubResource( 165 ), SubResource( 166 ), SubResource( 167 ) ],
+"loop": false,
+"name": "death",
+"speed": 3.0
+}, {
+"frames": [ SubResource( 168 ), SubResource( 169 ), SubResource( 170 ), SubResource( 169 ) ],
+"loop": true,
+"name": "idle",
+"speed": 3.0
+} ]
+
 [sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 15 )
 region = Rect2( 0, 0, 17, 81 )
@@ -586,6 +625,30 @@ position = Vector2( 1381, 575 )
 scale = Vector2( 1.67187, 1.84375 )
 texture = SubResource( 138 )
 
+[node name="Chuckles" type="Area2D" parent="."]
+position = Vector2( 1793, 28 )
+script = ExtResource( 19 )
+
+[node name="animaciones" type="AnimatedSprite" parent="Chuckles"]
+position = Vector2( 1388, 552 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 171 )
+animation = "idle"
+playing = true
+
+[node name="activador" type="CollisionShape2D" parent="Chuckles"]
+position = Vector2( 1226, 578 )
+shape = SubResource( 103 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chuckles"]
+position = Vector2( 1384, 564.5 )
+shape = SubResource( 102 )
+
+[node name="Light2D" type="Light2D" parent="Chuckles"]
+position = Vector2( 1381, 575 )
+scale = Vector2( 1.67187, 1.84375 )
+texture = SubResource( 138 )
+
 [node name="Poppy" type="Area2D" parent="."]
 position = Vector2( -132, 15 )
 script = ExtResource( 12 )
@@ -643,4 +706,5 @@ texture = SubResource( 111 )
 [connection signal="body_exited" from="player/checkeaPiso" to="player/hitbox" method="_on_checkeaPiso_body_exited"]
 [connection signal="body_entered" from="Murcielago/PathFollow2D/murcielago" to="Murcielago/PathFollow2D/murcielago" method="_on_Enemigo_body_entered"]
 [connection signal="body_entered" from="Blep" to="Blep" method="_on_Enemigo_body_entered"]
+[connection signal="body_entered" from="Chuckles" to="Chuckles" method="_on_Enemigo_body_entered"]
 [connection signal="body_entered" from="Poppy" to="Poppy" method="_on_Enemigo_body_entered"]

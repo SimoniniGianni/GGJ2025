@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=127 format=2]
 
 [ext_resource path="res://scripts/pj/pj_general.gd" type="Script" id=1]
 [ext_resource path="res://scripts/pj/animaciones.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://scripts/enemigos/hitbox.gd" type="Script" id=5]
 [ext_resource path="res://imgs/pj_prueba/der1.png" type="Texture" id=6]
 [ext_resource path="res://imgs/parallax/DesertLayer3.png" type="Texture" id=7]
-[ext_resource path="res://imgs/burbuja/cora_full.png" type="Texture" id=8]
+[ext_resource path="res://imgs/burbuja/Group 1.png" type="Texture" id=8]
 [ext_resource path="res://imgs/enemigos/Poppy/Poppy.png" type="Texture" id=9]
 [ext_resource path="res://imgs/pj_prueba/der2.png" type="Texture" id=10]
 [ext_resource path="res://imgs/parallax/DesertLayer2.png" type="Texture" id=11]
@@ -22,6 +22,7 @@
 [ext_resource path="res://scripts/enemigos/blep.gd" type="Script" id=20]
 [ext_resource path="res://imgs/enemigos/blep/blep.png" type="Texture" id=21]
 [ext_resource path="res://imgs/enemigos/blep/blep_death.png" type="Texture" id=22]
+[ext_resource path="res://imgs/burbuja/Group 2.png" type="Texture" id=23]
 
 [sub_resource type="AtlasTexture" id=120]
 atlas = ExtResource( 18 )
@@ -203,11 +204,11 @@ extents = Vector2( 26.5, 151.5 )
 [sub_resource type="RectangleShape2D" id=56]
 extents = Vector2( 29, 223.5 )
 
-[sub_resource type="Gradient" id=88]
+[sub_resource type="Gradient" id=178]
 colors = PoolColorArray( 1, 0, 0, 1, 0, 0, 0, 1 )
 
 [sub_resource type="GradientTexture2D" id=57]
-gradient = SubResource( 88 )
+gradient = SubResource( 178 )
 fill = 1
 fill_from = Vector2( 0.5, 0.4875 )
 fill_to = Vector2( 0.620833, 0.0625 )
@@ -218,7 +219,56 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id=59]
-extents = Vector2( 69.3333, 53.3333 )
+extents = Vector2( 37.4458, 31.2802 )
+
+[sub_resource type="AtlasTexture" id=168]
+atlas = ExtResource( 23 )
+region = Rect2( 0, 0, 48, 46 )
+
+[sub_resource type="AtlasTexture" id=169]
+atlas = ExtResource( 23 )
+region = Rect2( 48, 0, 48, 46 )
+
+[sub_resource type="AtlasTexture" id=170]
+atlas = ExtResource( 23 )
+region = Rect2( 96, 0, 48, 46 )
+
+[sub_resource type="AtlasTexture" id=171]
+atlas = ExtResource( 23 )
+region = Rect2( 144, 0, 48, 46 )
+
+[sub_resource type="AtlasTexture" id=172]
+atlas = ExtResource( 23 )
+region = Rect2( 192, 0, 48, 46 )
+
+[sub_resource type="AtlasTexture" id=173]
+atlas = ExtResource( 23 )
+region = Rect2( 240, 0, 48, 46 )
+
+[sub_resource type="AtlasTexture" id=174]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 60, 46 )
+
+[sub_resource type="AtlasTexture" id=175]
+atlas = ExtResource( 8 )
+region = Rect2( 60, 0, 60, 46 )
+
+[sub_resource type="AtlasTexture" id=176]
+atlas = ExtResource( 8 )
+region = Rect2( 120, 0, 60, 46 )
+
+[sub_resource type="SpriteFrames" id=177]
+animations = [ {
+"frames": [ SubResource( 168 ), SubResource( 169 ), SubResource( 170 ), SubResource( 171 ), SubResource( 172 ), SubResource( 173 ), null ],
+"loop": false,
+"name": "death",
+"speed": 9.0
+}, {
+"frames": [ SubResource( 174 ), SubResource( 175 ), SubResource( 176 ), SubResource( 175 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
 
 [sub_resource type="Gradient" id=64]
 offsets = PoolRealArray( 0, 0.0391061, 1 )
@@ -512,7 +562,7 @@ cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 32
 show_collision = true
 format = 1
-tile_data = PoolIntArray( 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 1, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 262176, 1, 0, 262177, 1, 0, 262178, 1, 0, 262179, 1, 0, 262180, 1, 0, 262181, 1, 0, 262182, 1, 0, 262183, 1, 0, 262184, 1, 0, 262185, 1, 0, 262186, 1, 0, 262187, 1, 0, 262188, 1, 0, 262189, 1, 0, 262190, 1, 0, 2621445, 10, 0, 2621447, 10, 0, 2621449, 10, 0, 2621451, 10, 0, 2621453, 10, 0 )
+tile_data = PoolIntArray( 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 1, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 1, 0, 262170, 1, 0, 262171, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 1, 0, 262175, 1, 0, 262176, 1, 0, 262177, 1, 0, 262178, 1, 0, 262179, 1, 0, 262180, 1, 0, 262181, 1, 0, 262182, 1, 0, 262183, 1, 0, 262184, 1, 0, 262185, 1, 0, 262186, 1, 0, 262187, 1, 0, 262188, 1, 0, 262189, 1, 0, 262190, 1, 0, 2621445, 10, 0, 2621447, 10, 0, 2621449, 10, 0, 2621451, 10, 0, 2621453, 10, 0 )
 
 [node name="DETALLES" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
@@ -615,6 +665,7 @@ shape = SubResource( 51 )
 script = ExtResource( 5 )
 
 [node name="frame1" type="CollisionShape2D" parent="Poppy_ene/hitbox"]
+visible = false
 position = Vector2( 1192.5, 621.5 )
 shape = SubResource( 52 )
 
@@ -669,19 +720,22 @@ rotation = -0.288505
 position = Vector2( -3.8147e-06, 3.05176e-05 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Corazon/PathFollow2D/burbuja"]
-position = Vector2( 0, -4 )
+position = Vector2( 2.14735, 0.637238 )
 scale = Vector2( 1.5, 1.5 )
 shape = SubResource( 59 )
 one_way_collision_margin = 0.0
 
-[node name="Sprite" type="Sprite" parent="Corazon/PathFollow2D/burbuja"]
-scale = Vector2( 2, 2 )
-texture = ExtResource( 8 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Corazon/PathFollow2D/burbuja"]
+scale = Vector2( 2.56617, 2.49269 )
+frames = SubResource( 177 )
+animation = "idle"
+playing = true
 
 [node name="Light2D" type="Light2D" parent="Corazon/PathFollow2D/burbuja"]
 position = Vector2( -4.72473, -24.6326 )
 scale = Vector2( 22.5225, 15.3915 )
 texture = SubResource( 60 )
+texture_scale = 1.42
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Corazon"]
 root_node = NodePath("../PathFollow2D")
